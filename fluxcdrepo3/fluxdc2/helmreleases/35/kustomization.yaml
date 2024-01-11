@@ -1,5 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- de-35-ping-enufa3zlz-0-0-0
-- de-35-pong-addfysfrj-0-0-1
