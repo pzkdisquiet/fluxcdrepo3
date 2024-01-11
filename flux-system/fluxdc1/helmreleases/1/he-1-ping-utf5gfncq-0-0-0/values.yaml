@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: he-1-ping-utf5gfncq-0-0-0
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: default
+      nsId: 20f7512c-e82f-4b02-b723-7ca629c2941c
+    image:
+      imagePullSecrets: []
+      pullPolicy: IfNotPresent
+      repository: rt.cloud.dzsi.local/docker/rw.ping
+      tag: '2004'
+    macvlanNetName: mynad2
+    macvlanNetNamespace: default
+    metrics:
+      annotations:
+        path: /api/v1/ping/metrics
+        port: 18888
+        scrape: true
+      enabled: true
+    replicaCount: 1
+    service:
+      type: NodePort
