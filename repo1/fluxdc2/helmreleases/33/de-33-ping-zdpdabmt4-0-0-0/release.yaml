@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: de-33-ping-zdpdabmt4-0-0-0
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: ./chartrepo1/fluxdc2/33/de-33-ping-zdpdabmt4-0-0-0
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: chartrepo1
+        namespace: default
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.102.73:8008/tmf-api/mano/serviceInventory/v4/default/service/service:DZSXNetworkFunction:default:e5349298-3708-49bf-9160-058dd25e22ef\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:default:e5349298-3708-49bf-9160-058dd25e22ef\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: de-33-ping-zdpdabmt4-0-0-0
+  targetNamespace: default
+  values: {}
