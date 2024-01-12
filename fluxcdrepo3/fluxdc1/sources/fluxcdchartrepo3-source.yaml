@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: fluxcdchartrepo3
+  namespace: default
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: fluxcdchartrepo3-secret
+  url: https://github.com/pzkdisquiet/fluxcdchartrepo3
