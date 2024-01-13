@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - he-32-ping-oo1njrb2o-0-0-0
 - he-32-pong-kmrbkaipk-0-0-1
+- he-32-ping-pd6ny6wu8-0-0-2

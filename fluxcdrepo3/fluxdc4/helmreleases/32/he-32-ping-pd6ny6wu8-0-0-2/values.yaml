@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: he-32-ping-pd6ny6wu8-0-0-2
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: default
+    image:
+      imagePullSecrets: []
+      pullPolicy: IfNotPresent
+      repository: rt.cloud.dzsi.local/docker/rw.ping
+      tag: '2004'
+    macvlanNetName: default-macvlan-net1
+    macvlanNetNamespace: default
+    metrics:
+      annotations:
+        path: /api/v1/ping/metrics
+        port: 18888
+        scrape: true
+      enabled: true
+    replicaCount: 1
+    service:
+      type: NodePort
