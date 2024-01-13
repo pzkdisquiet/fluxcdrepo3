@@ -1,4 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- he-42-ping-e0z6fm2e5-0-0-0
