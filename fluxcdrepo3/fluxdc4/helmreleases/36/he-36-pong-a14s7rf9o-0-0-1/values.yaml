@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: he-36-pong-a14s7rf9o-0-0-1
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: default
+      nsId: 951b9b78-8c25-4fb0-b030-c1fcb5c439fb
+    image:
+      imagePullSecrets: []
+      pullPolicy: IfNotPresent
+      repository: rt.cloud.dzsi.local/docker/rw.pong
+      tag: '2005'
+    macvlanNetName: mynad2
+    macvlanNetNamespace: default
+    metrics:
+      annotations:
+        path: /api/v1/pong/metrics
+        port: 18889
+        scrape: true
+      enabled: true
+    nodeSelector: {}
+    service:
+      type: NodePort

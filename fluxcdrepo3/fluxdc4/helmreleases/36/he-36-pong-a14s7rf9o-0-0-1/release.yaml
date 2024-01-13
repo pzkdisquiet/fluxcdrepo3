@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: he-36-pong-a14s7rf9o-0-0-1
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: ./fluxdc4/36/he-36-pong-a14s7rf9o-0-0-1
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: fluxcdchartrepo3
+        namespace: default
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.102.73:8008/tmf-api/mano/serviceInventory/v4/hello2/service/service:DZSXNetworkFunction:hello2:d18c4f2d-977b-48e2-82cb-bdf649c67f2b\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:hello2:d18c4f2d-977b-48e2-82cb-bdf649c67f2b\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: he-36-pong-a14s7rf9o-0-0-1
+  targetNamespace: default
+  values: {}
