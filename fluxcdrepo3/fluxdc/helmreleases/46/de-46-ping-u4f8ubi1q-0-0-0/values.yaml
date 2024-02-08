@@ -16,6 +16,6 @@ spec:
         port: 18888
         scrape: true
       enabled: true
-    replicaCount: 4
+    replicaCount: 5
     service:
       type: NodePort
