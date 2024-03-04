@@ -1,0 +1,13 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: de-com-ping-tuee1ldvt-0-0-0
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: autobot-test25-pzk
+      nsId: b14b4fa4-171b-4c3c-a96d-4edd37622f97
+    macvlanNetName: defaultcombined3macvlanlinkprofile
+    macvlanNetNamespace: default
+    replicaCount: '2'
