@@ -1,0 +1,13 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: de-com-pong-yikikaa4r-0-0-2
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: autobot-test25-pzk
+      nsId: 5b9d69f5-2d52-4efd-97b2-9feba8e68840
+    macvlanNetName: default-macvlan-net1
+    macvlanNetNamespace: defaultcombined3macvlanlinkprofile
+    replicaCount: '2'
