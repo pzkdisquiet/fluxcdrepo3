@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - de-com-ping-tuee1ldvt-0-0-0
 - de-com-pong-gcigwrtnl-0-0-1
+- de-com-pong-yikikaa4r-0-0-2
