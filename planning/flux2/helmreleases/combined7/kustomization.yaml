@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - de-com-ping-m3hrblwlh-0-0-0
 - de-com-pong-lugfokuit-0-0-1
+- de-com-pong-yrkpvsna4-0-0-2
