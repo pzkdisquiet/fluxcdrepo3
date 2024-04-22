@@ -1,7 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- de-com-pong-fmahbk2r2-0-0-0
 - de-com-ping-k6ytzzqx9-0-0-1
 - de-com-ping-qqefzktwe-0-0-2
 - de-com-pong-xg8ztiytd-0-0-3
