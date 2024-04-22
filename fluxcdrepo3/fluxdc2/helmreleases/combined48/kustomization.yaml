@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
 - de-com-ping-gouzoet84-0-0-1
 - de-com-ping-798zcnip2-0-0-2
-- de-com-ping-lowgmetz7-0-0-3
 - de-com-ping-toj2kinmn-0-0-4
 - de-com-ping-veucummoi-0-0-5
