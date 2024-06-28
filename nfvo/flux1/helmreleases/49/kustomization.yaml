@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- '49'
+- de-49-pong-8nqnrl2ia-0-0-1
