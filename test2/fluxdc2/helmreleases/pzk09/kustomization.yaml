@@ -1,5 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- de-pzk-ping-a1psbdsvb-0-0-0
 - de-pzk-pong-0jrmw0pz6-0-0-1
