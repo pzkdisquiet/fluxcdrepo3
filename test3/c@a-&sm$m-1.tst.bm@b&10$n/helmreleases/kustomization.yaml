@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
 - pzk13
 - pzk11
-- pzk16
