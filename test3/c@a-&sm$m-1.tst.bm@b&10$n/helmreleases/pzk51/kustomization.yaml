@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- pzk23.yaml
+- de-pzk-ping-nqctn3v7s-0-0-0
