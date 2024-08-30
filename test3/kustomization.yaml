@@ -1,4 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- c@a-&sm$m-1.tst.bm@b&10$n
