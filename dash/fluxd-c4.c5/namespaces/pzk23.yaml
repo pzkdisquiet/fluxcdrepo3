@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    name: pzk23
+    owner: pzk
+    platform.das-schiff.telekom.de/owner: pzk
+    schiff.telekom.de/owner: pzk
+  name: pzk23
