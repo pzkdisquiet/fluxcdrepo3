@@ -17,6 +17,6 @@ spec:
         scrape: true
       enabled: true
     nodeSelector: {}
-    replicaCount: '1'
+    replicaCount: '2'
     service:
       type: NodePort
