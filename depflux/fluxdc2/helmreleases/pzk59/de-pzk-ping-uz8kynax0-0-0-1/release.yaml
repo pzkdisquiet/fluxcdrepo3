@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: de-pzk-ping-uz8kynax0-0-0-1
+  namespace: pzk22
+spec:
+  chart:
+    spec:
+      chart: ping
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: chart-repo2
+        namespace: default
+      version: 0.3.0
+  dependsOn:
+  - name: de-pzk-pong-ebo1kiagx-0-0-0
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.102.65:8008/tmf-api/mano/serviceInventory/v4/default/service/service:DZSXNetworkFunction:default:a4309924-ec46-4deb-9d7d-e1e561291ce4\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:default:a4309924-ec46-4deb-9d7d-e1e561291ce4\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: de-pzk-ping-uz8kynax0-0-0-1
+  targetNamespace: pzk22
+  values: {}
