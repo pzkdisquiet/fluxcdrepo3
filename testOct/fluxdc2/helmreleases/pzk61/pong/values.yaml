@@ -6,7 +6,7 @@ metadata:
 spec:
   values:
     global:
-      namespace: default
+      namespace: pzk23
       nsId: 39301000-a1bb-426b-92d4-6e592d5cf3a9
     macvlanNetName: defaultpzk61macvlanlinkprofile
     macvlanNetNamespace: default
@@ -19,4 +19,4 @@ spec:
     nodeSelector: {}
     replicaCount: '2'
     service:
-      type: NodePort
+      type: Test
