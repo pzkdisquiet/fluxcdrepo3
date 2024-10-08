@@ -24,5 +24,5 @@ spec:
         target:
           kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
   releaseName: de-pzk-pong-ndi6mknwk-0-0-0
-  targetNamespace: default
+  targetNamespace: pzk23
   values: {}
