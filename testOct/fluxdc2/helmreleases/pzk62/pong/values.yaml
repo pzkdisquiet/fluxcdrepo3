@@ -13,7 +13,7 @@ spec:
     metrics:
       annotations:
         path: /api/v1/pong/metrics
-        port: 18889
+        port: 1889
         scrape: true
       enabled: true
     nodeSelector: {}
