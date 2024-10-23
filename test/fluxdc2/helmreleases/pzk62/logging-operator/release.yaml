@@ -19,8 +19,8 @@ spec:
       patches:
       - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
           metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
-          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.103.64:8008/tmf-api/mano/serviceInventory/v4/default/service/service:DZSXNetworkFunction:default:54e8c050-af34-4f77-a5cb-5bf8e38458a3\n\
-          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:default:54e8c050-af34-4f77-a5cb-5bf8e38458a3\n"
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.103.64:8008/tmf-api/mano/serviceInventory/v4/default/service/service:DZSXNetworkFunction:default:0d4df44f-d1f1-48f6-b9a1-fa771cf5ef2b\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:default:0d4df44f-d1f1-48f6-b9a1-fa771cf5ef2b\n"
         target:
           kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
   releaseName: logging-operator
