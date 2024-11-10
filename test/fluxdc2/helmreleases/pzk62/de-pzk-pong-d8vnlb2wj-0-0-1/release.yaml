@@ -13,6 +13,8 @@ spec:
         name: chart-repo4
         namespace: default
       version: 0.2.0
+  dependsOn:
+  - name: de-pzk-pong-yi8adsj5w-0-0-2
   interval: 5m0s
   postRenderers:
   - kustomize:
