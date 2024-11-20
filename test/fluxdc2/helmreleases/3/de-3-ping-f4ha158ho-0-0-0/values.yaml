@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: de-3-ping-f4ha158ho-0-0-0
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: default
+      nsId: 17914e24-8804-4498-b3b9-8b5ee39c0800
+    macvlanNetName: default3macvlanlinkprofile
+    macvlanNetNamespace: default
+    metrics:
+      annotations:
+        path: /api/v1/ping/metrics
+        port: 18888
+        scrape: true
+      enabled: true
+    replicaCount: '1'
+    service:
+      type: NodePort
