@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
 - '1'
 - '10'
-- '3'
