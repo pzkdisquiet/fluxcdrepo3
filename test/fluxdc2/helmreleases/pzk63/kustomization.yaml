@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - de-pzk-ping-3tmrughbn-0-0-0
 - de-pzk-pong-d7tjsan6a-0-0-1
+- de-pzk-zing-fhvb6kzlw-0-0-2
