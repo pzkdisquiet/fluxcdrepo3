@@ -14,7 +14,7 @@ spec:
         namespace: default
       version: 0.3.0
   dependsOn:
-  - name: de-pzk-pong-je2h8yrxn-0-0-1
+  - name: de-pzk-pong-je2h8yrxn-0-1-2
   interval: 5m0s
   postRenderers:
   - kustomize:
