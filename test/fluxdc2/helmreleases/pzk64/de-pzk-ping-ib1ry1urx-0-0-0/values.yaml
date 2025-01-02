@@ -13,7 +13,7 @@ spec:
     metrics:
       annotations:
         path: /api/v1/ping/metrics
-        port: 1888
+        port: 18888
         scrape: true
       enabled: true
     replicaCount: '1'
