@@ -20,4 +20,3 @@ spec:
     replicaCount: '2'
     service:
       type: NodePort
-    y: '1'
