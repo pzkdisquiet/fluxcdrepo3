@@ -1,5 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- te-ns--ping-an7nh9dnt-0-0-0
 - te-ns--pong-qjmoaox4j-0-0-1
