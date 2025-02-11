@@ -1,5 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+patchesStrategicMerge:
+- values.yaml
 resources:
-- te-flu-pong-gd2j9tf1v-0-0-1
-- te-flu-ping-pwzqs44so-0-0-0
+- release.yaml
