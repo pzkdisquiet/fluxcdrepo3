@@ -1,5 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- fluxns-tes1
-- fluxns-tes2
+- te-flu-pong-zocsfcth8-0-0-1
