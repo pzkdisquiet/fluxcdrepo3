@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: te-flu-ping-fu6euwwdz-0-0-0
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: ping
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: chart-repo4
+        namespace: default
+      version: 0.3.0
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.112.2:443/tmf-api/mano/serviceInventory/v4/test_flux/service/service:DZSXNetworkFunction:test_flux:288963b5-6163-4207-be9c-1c8ae09b4e43\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:test_flux:288963b5-6163-4207-be9c-1c8ae09b4e43\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: te-flu-ping-fu6euwwdz-0-0-0
+  targetNamespace: default
+  values: {}
