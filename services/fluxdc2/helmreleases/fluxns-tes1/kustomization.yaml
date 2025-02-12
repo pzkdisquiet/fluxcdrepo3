@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - te-flu-ping-yfwbtnlrc-0-0-0
 - te-flu-pong-xozn6b8bn-0-0-1
+- te-flu-ping-zlhkvwobe-0-0-2
