@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dt-5g--pong-8jpba1oih-0-0-1
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: pong
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: sarath-helm
+        namespace: flux-system
+      version: '1.0'
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.102.68:8008/tmf-api/mano/serviceInventory/v4/dt/service/service:DZSXNetworkFunction:dt:0a80ec07-385d-4bd7-af9f-940a117f82bd\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:dt:0a80ec07-385d-4bd7-af9f-940a117f82bd\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: dt-5g--pong-8jpba1oih-0-0-1
+  targetNamespace: default
+  values: {}
