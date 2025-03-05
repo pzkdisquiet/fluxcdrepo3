@@ -2,4 +2,3 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - dt-5g--ping-ipvukgih3-0-0-0
-- dt-5g--pong-8jpba1oih-0-0-1
