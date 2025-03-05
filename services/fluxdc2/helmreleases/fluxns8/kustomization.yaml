@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- fluxns8
+- te-flu-ping-tprvrl3zh-0-0-0
