@@ -2,4 +2,3 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - te-flu-pong-zzxs3dlzr-0-0-1
-- te-flu-ping-hp7slxe1t-0-0-0
