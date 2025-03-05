@@ -1,5 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- te-flu-ping-6axyfimly-0-0-0
-- te-flu-pong-mag8c4shi-0-0-1
