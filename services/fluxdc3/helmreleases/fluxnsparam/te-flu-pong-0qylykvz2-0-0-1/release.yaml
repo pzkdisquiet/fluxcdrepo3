@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: te-flu-pong-0qylykvz2-0-0-1
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: pong
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: chart-repo4
+        namespace: default
+      version: 0.2.0
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://lpsarath1.lab.dzsi.local:443/tmf-api/mano/serviceInventory/v4/testproj/service/dso/Service/cbdso-ref-a/testproj:df905a54-d763-4b01-9908-332bd1bfbdc5\n\
+          \        dzsi.com/dzsx-network-function-id: dso/Service/cbdso-ref-a/testproj:df905a54-d763-4b01-9908-332bd1bfbdc5\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: te-flu-pong-0qylykvz2-0-0-1
+  targetNamespace: default
+  values: {}
