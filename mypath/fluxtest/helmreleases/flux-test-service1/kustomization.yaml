@@ -2,4 +2,3 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - de-flu-pong-eanf7mmrm-0-0-1
-- de-flu-ping-bksdxxs60-0-0-0
