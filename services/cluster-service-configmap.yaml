@@ -12,4 +12,4 @@ metadata:
   name: anish-configmap
   namespace: asoman
 data:
-  services: service:DZSXNetworkFunction:dt:7d176d2f-80e9-44ac-8463-d4e701dd1a3a,service:DZSXNetworkFunction:dt:942480db-e861-4b2d-baeb-14a7439ffb77
+  services: service:DZSXNetworkFunction:dt:7d176d2f-80e9-44ac-8463-d4e701dd1a3a
