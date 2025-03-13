@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-cm
+  namespace: asom
+data:
+  services: service:DZSXNetworkFunction:dt:e12979ed-87ff-4c02-a5d9-153b4f210dc5
