@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dt-5g--ping-ipvukgih3-0-0-0
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: ping
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: chart-repo4
+        namespace: default
+      version: '1.0'
+  interval: 5m0s
+  postRenderers:
+  - kustomize:
+      patches:
+      - patch: "\napiVersion: apps/v1\nkind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)\n\
+          metadata:\n  name: will-be-ingored\nspec:\n  template:\n    metadata:\n\
+          \      annotations:\n        dzsi.com/dzsx-network-function-href: https://10.157.107.75:8008/tmf-api/mano/serviceInventory/v4/dt/service/service:DZSXNetworkFunction:dt:7d176d2f-80e9-44ac-8463-d4e701dd1a3a\n\
+          \        dzsi.com/dzsx-network-function-id: service:DZSXNetworkFunction:dt:7d176d2f-80e9-44ac-8463-d4e701dd1a3a\n"
+        target:
+          kind: (Deployment|ReplicaSet|StatefulSet|DaemonSet)
+  releaseName: dt-5g--ping-ipvukgih3-0-0-0
+  targetNamespace: default
+  values: {}

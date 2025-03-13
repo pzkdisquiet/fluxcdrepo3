@@ -5,3 +5,11 @@ kind: ConfigMap
 metadata:
   name: anish-cluster-map
   namespace: asoman
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: anish-configmap
+  namespace: asoman
+data:
+  services: service:DZSXNetworkFunction:dt:7d176d2f-80e9-44ac-8463-d4e701dd1a3a
