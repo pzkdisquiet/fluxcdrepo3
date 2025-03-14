@@ -4,4 +4,4 @@ metadata:
   name: cluster-cm
   namespace: asom
 data:
-  services: service:DZSXNetworkFunction:dt:a03a251a-438b-4c91-aa38-7a8a21c0e33a
+  services: service:DZSXNetworkFunction:dt:a03a251a-438b-4c91-aa38-7a8a21c0e33a,service:DZSXNetworkFunction:dt:c311df96-ef8a-4b78-b3d0-ef22b138ab72
