@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dt-flu-pong-nvog7wrni-0-0-1
+  namespace: default
+spec:
+  values:
+    global:
+      namespace: default
+      nsId: ab9066c2-f2be-493a-947e-8d6b1a7d6265
+    macvlanNetName: dtfluxns345macvlanlinkprofile
+    macvlanNetNamespace: default
+    metrics:
+      annotations:
+        path: /api/v1/pong/metrics
+        port: 18889
+        scrape: true
+      enabled: true
+    nodeSelector: {}
+    replicaCount: '2'
+    service:
+      type: NodePort
