@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cluster-cm
-  namespace: asom
-data:
-  services: ''
