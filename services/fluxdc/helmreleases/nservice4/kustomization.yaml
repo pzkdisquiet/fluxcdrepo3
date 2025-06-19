@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- nservice4
+- te-nse-pong-r5qsqvwwz-0-0-1
