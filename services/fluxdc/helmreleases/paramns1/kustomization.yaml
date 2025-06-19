@@ -1,4 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-- te-par-pong-xpwm9apbs-0-0-1
