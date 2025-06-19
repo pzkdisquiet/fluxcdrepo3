@@ -1,5 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+patchesStrategicMerge:
+- values.yaml
 resources:
-- te-nse-ping-touxqrv80-0-0-0
-- te-nse-pong-rfltjxik6-0-0-1
+- release.yaml
